@@ -22,7 +22,7 @@ body {
     border-radius: 2rem;
     border: none;
     background: linear-gradient(267deg, #4274ba 1%, #F9A11B 100%);
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
 }
 
@@ -52,24 +52,15 @@ body {
     justify-content: center;
     gap: 4rem;
     margin: 4rem 10rem 10rem;
-<<<<<<< HEAD
 
-}
-
-.container-title{
-    position: relative;
-    
-}
-
-
-=======
 }
 
 .container-title {
     position: relative;
+    margin-top: 4rem; /* Adjust as needed */
 }
 
->>>>>>> 9ee79896091bbe17d8ee2d54b1e70fad4760db4b
+
 .container-title h2 {
     padding: 0 2rem;
     font-size: 2.5rem;
@@ -164,7 +155,6 @@ body {
     font-size: 1.2rem;
     margin-bottom: 3rem;
     text-decoration: none;
-<<<<<<< HEAD
     margin-bottom: 0rem;
 }
 .hero-letter
@@ -177,30 +167,22 @@ body {
     margin-bottom: 3rem;
     text-decoration: none;
 
-=======
->>>>>>> 9ee79896091bbe17d8ee2d54b1e70fad4760db4b
 }
 
 /* about */
 .about-sections {
     gap: 4rem;
 }
-<<<<<<< HEAD
 #about {
     top: 100vh; /* Moves it up, adjust as needed */
 }
-=======
->>>>>>> 9ee79896091bbe17d8ee2d54b1e70fad4760db4b
 
 .about-right {
     flex-direction: column;
     gap: 4rem;
     width: 100%;
-<<<<<<< HEAD
     font-size: 1.5rem;
     text-align: center;
-=======
->>>>>>> 9ee79896091bbe17d8ee2d54b1e70fad4760db4b
 }
 
 .about-left img {
