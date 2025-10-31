@@ -2,208 +2,278 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" type="image/x-icon" href="./assets/Image7.png">
-    <script src="./scripts/scripts.js" defer></script>
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/Image7.png" />
+  <script src="./scripts/scripts.js" defer></script>
+  <title>Portfolio</title>
 </head>
 
 <body>
-    <!-- nav -->
-    <div>
-        <div class="navbar-placeholder"></div>
-        <nav class="navbar flex">
-            <a href="#home"><img src="./assets/Image7.png" alt="logo" class="animation"></a>
-            <div class="nav-menu flex">
-                <a href="#home" class="animation">Home</a>
-                <a href="#about" class="animation">About</a>
-                <a href="#experience" class="animation">Experience</a>
-                <a href="#work" class="animation">Projects</a>
-                <a href="#contact" class="animation">Contact</a>
-            </div>
-            <form action="https://www.linkedin.com/in/tiya-bordia-158036288" target="_blank">
-                <button type="submit" class="btn nav-btn animation">Linkedin</button>
-            </form>
-            
+  <!-- Navbar -->
+  <div>
+    <div class="navbar-placeholder"></div>
+    <nav class="navbar flex">
+      <a href="#home"><img src="./assets/Image7.png" alt="logo" class="animation" /></a>
+      <div class="nav-menu flex">
+        <a href="#home" class="animation">Home</a>
+        <a href="#about" class="animation">About</a>
+        <a href="#experience" class="animation">Experience</a>
+        <a href="#projects" class="animation">Projects</a>
+        <a href="#contact" class="animation">Contact</a>
+      </div>
+      <form action="https://www.linkedin.com/in/tiya-bordia-158036288" target="_blank">
+        <button type="submit" class="btn nav-btn animation">LinkedIn</button>
+      </form>
+    </nav>
+  </div>
 
-        </nav>
-    </div>
+  <!-- Hero -->
+  <div class="hero flex" id="home">
+    <img src="./assets/Tiya.jpg" alt="Tiya Bordia" class="hero-img animation" />
+    <h1><span class="text-effect">I'm Tiya Bordia,</span> A CS student at Rutgers</h1>
+    <a href="./assets/Tiya.pdf" class="hero-resume animation" target="_blank" rel="noopener noreferrer">Resume</a>
+    <a href="./assets/Cover Letter.pdf" class="hero-resume animation" target="_blank" rel="noopener noreferrer">Cover Letter</a>
+    <div class="video-section animation" style="text-align:center; margin-top: 20px;">
+        <h3>🎥 Elevator Pitch Video</h3>
+        <video controls width="500" height="300" style="border-radius: 12px; margin-top: 10px;">
+          <source src="./assets/Video.mp4" type="video/mp4" />
+        </video>
+      </div>
+</div>
 
-
-    <!-- hero basically the intro -->
-    <div class="hero flex" id="home">
-        <h1><span class="text-effect">I'm Tiya Bordia,</span> A CS student at Rutgers</h1>
-        <a href="./assets/Resume - Tiya Bordia (6).pdf" class="hero-resume animation" target="_blank" rel="noopener noreferrer">Resume</a>
-    </div>
-
-    <!-- about -->
-    <section class="container flex" id="about">
-        <div class="container-title">
-            <h2>About Me</h2>
-            <img src="./assets/decoration-heading.png" alt="decoration">
-        </div>
-        <div class="about-sections flex">
-            <div class="about-left flex">
-            </div>
-            <div class="about-right flex">
-                <p>Hello, my name is Tiya Bordia. Freshman at Rutgers University, double majoring in Computer Science and Data Science. Driven by a passion for technology and data analytics, I am a motivated and inquisitive student with experience in Java, Python, UI/UX, and AI. I aim to leverage these skills in a career that merges technology and innovation to tackle real-world challenges.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="container flex" id="experience">
-        <div class="container-title">
-            <h2>Experience</h2>
-            <img src="./assets/decoration-heading.png" alt="decoration">
-        </div>
-        <div class="grid-container">
-            <div class="services-format flex animation">
-                <h3>01</h3>
-                <h2 class="text-effect">Blueprint Frontend Fellowship</h2>
-                <p>Learned front-end development using React, TypeScript, JavaScript, HTML, and CSS. Built responsive, interactive web interfaces while mastering skills in React components, state management, and hooks. Developed a React-based web application to track stock market information.</p>
-            </div>
-            <div class="services-format flex animation">
-                <h3>02</h3>
-                <h2 class="text-effect">Blueprint Product Management Fellowship</h2>
-                <p>Designed and developed a connection-building app enabling meaningful interactions through shared interests. Conducted user research and leveraged data insights to refine features. Designed and implemented Minimum Viable Product (MVP) features, while monitoring key performance metrics.
-                </p></p>
-            </div>
-            <div class="services-format flex animation">
-                <h3>03</h3>
-                <h2 class="text-effect">IDEA Expeditions CliMit Fellow</h2>
-                <p>Engaged in interdisciplinary research, design, and entrepreneurship initiatives to develop climate solutions using AI and GIS. Partnered with StewardGreen and Somerset County Park Commission to explore drone technology for climate resilience. Presented the team solution to a panel of former IDEA members and the CEO of StewardGreen.</p>
-            </div>
-            <div class="services-format flex animation">
-                <h3>04</h3>
-                <h2 class="text-effect">Engineering Possibilities Summit</h2>
-                <p>Selected for a prestigious Goldman Sachs program in Software Engineering, Cybersecurity, and Quantitative Strategy. Strengthened financial analysis skills and utilized Excel for financial reporting, trend assessments, and reconciliation. Conducted credit risk analysis and developed risk mitigation strategies.</p>
-            </div>
-            
-        </div>
-    </div>
-    <div class="about-skills">
-        <div>
-            <h3>Languages</h3>
-            <div class="about-skill flex animation">
-                <p>HTML & CSS</p>
-                <hr style="width: 80%;">
-            </div>
-            <div class="about-skill flex animation">
-                <p>Java</p>
-                <hr style="width: 60%;">
-            </div>
-            <div class="about-skill flex animation">
-                <p>JavaScript & Node.js</p>
-                <hr style="width: 40%;">
-            </div>
-            <div class="about-skill flex animation">
-                <p>Python</p>
-                <hr style="width: 40%;">
-            </div>
-        </div>
-    </div>
-    </section>
-    <!-- Projects -->
-    <section class="container flex" id="projects">
+  <!-- About -->
+  <section class="container flex" id="about">
     <div class="container-title">
-        <h2>Projects</h2>
-        <img src="./assets/decoration-heading.png" alt="decoration">
+      <h2>About Me</h2>
+      <img src="./assets/decoration-heading.png" alt="decoration" />
     </div>
+    <div class="about-sections flex">
+      <div class="about-left flex"></div>
+      <div class="about-right flex">
+        <p>
+          Hello, my name is Tiya Bordia. I’m a Sophomore at Rutgers University,
+          double majoring in Computer Science and Data Science. Driven by a passion
+          for technology and data analytics, I’m a motivated and inquisitive student
+          with experience in Java, Python, UI/UX, and AI. I aim to leverage these
+          skills in a career that merges technology and innovation to tackle
+          real-world challenges.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="container flex" id="experience">
+    <div class="container-title">
+      <h2>Experience</h2>
+      <img src="./assets/decoration-heading.png" alt="decoration" />
+    </div>
+
     <div class="grid-container">
-        <div class="services-format flex animation">
-            <h3>01</h3>
-            <h2 class="text-effect"><a href="https://pomodoro-timer-seven-delta.vercel.app/" target="_blank">Pomodoro-Timer</a></h2>
-            <p>Built with React, HTML, CSS, and JavaScript, the app offers a sleek and intuitive interface with customizable timer settings. It includes a selection of backgrounds to create the ideal study atmosphere, Spotify integration for study music, and a task manager to help users stay organized. These features work together to optimize time management and ensure consistent productivity during study sessions.</p>
- 
-        </div>
-        <div class="services-format flex animation">
-            <h3>02</h3>
-            <h2 class="text-effect"><a href="https://nutriplanapp.vercel.app/" target="_blank">NutriPlan</a></h2>
-            <p>Healthy Meal Planner web app designed to help users find recipes tailored to their needs by using their ingredients of choice, considering their diet preferences, and avoiding any allergens. Built with React, HTML, CSS, and JavaScript, the app offers a user-friendly interface, making healthy eating easier and more accessible.
-            </p>
-        </div>
-        <div class="services-format flex animation">
-            <h3>03</h3>
-            <h2 class="text-effect">SkinSense</h2>
-            <p>Developed SkinSense, an AI-powered tool using image recognition to detect skin conditions, with a primary focus on MonkeyPox. It employs two specialized models to provide accurate analysis, helping users seek medical advice faster. This innovation enhances healthcare accessibility and supports public health efforts. Awarded $250 in a competition with 250+ participants. </p>
-        </div>
+      <div class="services-format flex animation">
+        <h3>01</h3>
+        <h2 class="text-effect">Design Research Intern</h2>
+        <p>
+          Developed an interactive ArcGIS web map to visualize tagged fish
+          movement patterns using geospatial and temporal data collected from
+          acoustic receivers.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>02</h3>
+        <h2 class="text-effect">Innovation Fellow Leader</h2>
+        <p>
+          Led and mentored a cohort of 20 students through innovation and
+          entrepreneurship projects. Designed a student-focused curriculum blending
+          design thinking, analytics, and creativity to strengthen problem-solving
+          and market readiness.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>03</h3>
+        <h2 class="text-effect">AI/ML Fellow</h2>
+        <h4>Meta & Break Through Tech @ Cornell Tech</h4>
+        <p>
+          Completed hands-on machine learning training with a focus on Python, data modeling,
+          supervised and unsupervised learning, and neural networks.
+          Currently applying these skills through an AI/ML Fellowship with Meta, working on projects
+          that integrate real-world data and ethical AI design.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>04</h3>
+        <h2 class="text-effect">Blueprint Frontend Fellowship</h2>
+        <p>
+          Learned front-end development using React, TypeScript, JavaScript, HTML,
+          and CSS. Built responsive, interactive web interfaces while mastering
+          React components, state management, and hooks. Developed a React-based
+          web app to track stock market information.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>05</h3>
+        <h2 class="text-effect">Blueprint Product Management Fellowship</h2>
+        <p>
+          Designed and developed a connection-building app enabling meaningful
+          interactions through shared interests. Conducted user research and used
+          data insights to refine features. Designed and implemented MVP features
+          while monitoring key performance metrics.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>06</h3>
+        <h2 class="text-effect">IDEA Expeditions CliMit Fellow</h2>
+        <p>
+          Engaged in interdisciplinary research, design, and entrepreneurship
+          initiatives to develop climate solutions using AI and GIS. Partnered with
+          StewardGreen and Somerset County Park Commission to explore drone
+          technology for climate resilience. Presented team solutions to a panel of
+          IDEA members and the CEO of StewardGreen.
+        </p>
+      </div>
     </div>
-</section>
 
+    <div class="about-skills">
+      <div>
+        <h3>Languages</h3>
+        <div class="about-skill flex animation">
+          <p>HTML & CSS</p>
+          <hr style="width: 80%" />
+        </div>
+        <div class="about-skill flex animation">
+          <p>Java</p>
+          <hr style="width: 60%" />
+        </div>
+        <div class="about-skill flex animation">
+          <p>JavaScript & Node.js</p>
+          <hr style="width: 40%" />
+        </div>
+        <div class="about-skill flex animation">
+          <p>Python</p>
+          <hr style="width: 40%" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- projects 
-    <main class="container flex" id="work">
-        <div class="container-title">
-            <h2>Projects</h2>
-            <img src="./assets/decoration-heading.png" alt="decoration">
-        </div>
-        <div class="grid-container">
-            <div class="project-card flex animation">
-                <h3>NutriPlan</h3>
-                <p>Developed a Healthy Meal Planner web app to help users find recipes based on ingredients, diet preferences, and allergen considerations. Built with React, HTML, CSS, and JavaScript, the app provides personalized meal recommendations, dietary filters, and allergen alerts in a sleek, responsive design.</p>
-            </div>
-        
-            <div class="project-card flex animation">
-                <h3>Pomodoro Timer</h3>
-                <p>Created a Pomodoro timer app to improve focus and productivity. Built with React, HTML, CSS, and JavaScript, it features customizable timers, aesthetic backgrounds, Spotify-integrated study music, and a task manager to help users stay organized and optimize time management.</p>
-            </div>
-        </div>
-    </main>
--->
-    <!-- contact -->
-    <section class="container flex" id="contact">
-        <div class="container-title">
-            <h2>Contact</h2>
-            <img src="./assets/decoration-heading.png" alt="decoration">
-        </div>
-        <div class="contact-section flex">
-            <div class="contact-left flex">
-                <h2 class="text-effect">Let's Talk</h2>
-                <p>Contact me about employment or projects</p>
-                <div class="contact-details flex">
-                    <div class="contact-detail flex">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>tiyabordia06@gmail.com</p>
-                    </div>
-                    <div class="contact-detail flex">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>USA</p>
-                    </div>
-                </div>
-            </div>
-            <form action="https://formsubmit.co/tiyabordia06@gmail.com" method="POST" class="contact-right flex">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
-                <label for="message">Enter a message</label>
-                <textarea name="message" id="message" placeholder="Leave a message"></textarea>
-            
-                <button type="submit" class="btn animation">Submit</button>
-            </form>
-        </div>
-    </section>
+  <!-- Projects -->
+  <section class="container flex" id="projects">
+    <div class="container-title">
+      <h2>Projects</h2>
+      <img src="./assets/decoration-heading.png" alt="decoration" />
+    </div>
 
-    <!-- footer -->
-    <footer class="flex">
-        <div class="footer-top flex">
-            <div class="footer-top-left">
-                <img src="./assets/Image9.png" alt="logo">
-            </div>
-            <div class="footer-top-right">
-                <p>Just a student want to learn more! :)</p>
-            </div>
+    <div class="grid-container">
+      <div class="services-format flex animation">
+        <h3>01</h3>
+        <h2 class="text-effect">
+          <a href="https://github.com/TiyaB-debug/CIC_CovidResearch" target="_blank">COVID Research Project</a>
+        </h2>
+        <p>
+          Analyzed the effectiveness of lockdown policies across different states
+          in Brazil, India, and the United States during the COVID-19 pandemic.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>02</h3>
+        <h2 class="text-effect">
+          <a href="https://pomodoro-timer-seven-delta.vercel.app/" target="_blank">Pomodoro Timer</a>
+        </h2>
+        <p>
+          Built with React, HTML, CSS, and JavaScript, this app offers a sleek,
+          intuitive interface with customizable timer settings, aesthetic
+          backgrounds, Spotify integration, and task management tools to help users
+          stay productive.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>03</h3>
+        <h2 class="text-effect">
+          <a href="https://nutriplanapp.vercel.app/" target="_blank">NutriPlan</a>
+        </h2>
+        <p>
+          A healthy meal planner web app helping users find recipes tailored to
+          their needs based on ingredients, diet preferences, and allergens. Built
+          with React, HTML, CSS, and JavaScript.
+        </p>
+      </div>
+
+      <div class="services-format flex animation">
+        <h3>04</h3>
+        <h2 class="text-effect">SkinSense</h2>
+        <p>
+          Developed an AI-powered tool using image recognition to detect skin
+          conditions, primarily MonkeyPox. Employs dual models for accurate
+          analysis, helping users seek medical advice faster. Awarded $250 in a
+          competition with 250+ participants.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="container flex" id="contact">
+    <div class="container-title">
+      <h2>Contact</h2>
+      <img src="./assets/decoration-heading.png" alt="decoration" />
+    </div>
+
+    <div class="contact-section flex">
+      <div class="contact-left flex">
+        <h2 class="text-effect">Let's Talk</h2>
+        <p>Contact me about employment or projects</p>
+        <div class="contact-details flex">
+          <div class="contact-detail flex">
+            <i class="fa-solid fa-envelope"></i>
+            <p>tiyabordia06@gmail.com</p>
+          </div>
+          <div class="contact-detail flex">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>USA</p>
+          </div>
         </div>
-        <hr>
-        <div class="footer-bottom">
-            <p>©2024 by Tiya Bordia.</p>
-        </div>
-    </footer>
+      </div>
+
+      <form action="https://formsubmit.co/tiyabordia06@gmail.com" method="POST" class="contact-right flex">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" />
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" />
+        <label for="message">Enter a message</label>
+        <textarea name="message" id="message" placeholder="Leave a message"></textarea>
+        <button type="submit" class="btn animation">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="flex">
+    <div class="footer-top flex">
+      <div class="footer-top-left">
+        <img src="./assets/Image9.png" alt="logo" />
+      </div>
+      <div class="footer-top-right">
+        <p>Just a student wanting to learn more! :)</p>
+      </div>
+    </div>
+    <hr />
+    <div class="footer-bottom">
+      <p>©2024 by Tiya Bordia.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
