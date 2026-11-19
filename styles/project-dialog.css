@@ -1,0 +1,29 @@
+/* Native project dialog, sharing the active palette and reading styles. */
+body.book-is-open { overflow-y:hidden; }
+.book-dialog { width:min(1100px,94vw); max-width:94vw; max-height:90dvh; height: min(850px,90dvh); border:1px solid var(--line); padding:0; background:var(--paper); color:var(--ink); box-shadow:0 20px 80px var(--shadow-lift); overflow:hidden; perspective:1600px; }
+.book-dialog::backdrop { background:color-mix(in srgb,var(--navy) 55%,transparent); backdrop-filter:blur(3px); }
+.book-dialog-bar { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:12px 24px; border-bottom:1px solid var(--line); background:var(--paper); }
+.book-dialog-bar h2 { font:500 18px/1.4 var(--sans); letter-spacing:normal; }
+.book-dialog-close { min-width:72px; min-height:44px; padding:8px 16px; font:500 15px/1.4 var(--sans); border:1px solid var(--line); background:var(--paper); color:var(--ink); cursor:pointer; }
+.book-dialog-close:hover { border-color:var(--ink); }
+.book-dialog-close:focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+.book-dialog-close:active { transform:scale(.97); }
+.book-dialog-scroll { height:calc(100% - 70px); overflow-y:auto; overscroll-behavior:contain; padding:24px 32px 40px; }
+.book-dialog .case-study { width:100%; padding-top:0; }
+.book-dialog .case-body { grid-template-columns:minmax(0,1fr); margin-top:32px; }
+.book-dialog .case-body aside { display:none; }
+.book-dialog .case-study>h1 { font-size:clamp(40px,6vw,72px); }
+.book-dialog .case-art p { font-size:clamp(24px,3vw,36px); }
+.book-dialog .case-body section { scroll-margin-top:20px; }
+.book-dialog .next-project { padding-bottom:16px; }
+.book-dialog .dialog-state { padding-block:48px; font-size:18px; }
+.book-opening-cover { position:absolute; inset:70px auto 0 0; width:52%; z-index:3; transform-origin:left center; backface-visibility:hidden; pointer-events:none; background:var(--opening-color,var(--navy)); color:var(--opening-ink,var(--paper)); display:flex; align-items:center; padding:40px; border:1px solid var(--line); font:400 clamp(36px,5vw,64px)/1.15 var(--serif); animation:open-project-book 420ms var(--ease-out) forwards; }
+.book-opening-cover::after { content:'';position:absolute;inset:14px;border:1px solid currentColor;opacity:.3; }
+@keyframes open-project-book { 0% {transform:rotateY(0);opacity:1} 80% {opacity:1} 100% {transform:rotateY(-115deg);opacity:0} }
+@media(max-width:700px) { .book-dialog { width:96vw;max-width:96vw;height:94dvh;max-height:94dvh; } .book-dialog-scroll {padding:20px;} .book-dialog-bar {padding:12px 16px;} .book-opening-cover {width:85%;padding:28px;} }
+@media(prefers-reduced-motion:reduce) { .book-opening-cover {animation:none;display:none;} }
+
+.book-dialog-close { transition:transform 120ms var(--ease-out); }
+.book-dialog-close:focus-visible { transition:none; }
+.book-dialog .dialog-state[hidden] { display:none; }
+@media(prefers-reduced-motion:reduce) { .book-dialog-close { transition:none; } .book-dialog-close:active {transform:none;} }
