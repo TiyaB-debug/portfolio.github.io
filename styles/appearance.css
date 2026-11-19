@@ -1,0 +1,13 @@
+/* Quiet side control; the palette is fixed across both modes. */
+body { padding-bottom:80px; }
+.appearance-dock { position:fixed; right:16px; bottom:20px; z-index:30; display:flex; gap:4px; padding:4px; background:var(--paper); border:1px solid var(--line); }
+.appearance-dock button { min-height:44px; min-width:58px; padding:8px 12px; border:1px solid transparent; background:var(--paper); color:var(--muted); font:500 14px/1.4 var(--sans); cursor:pointer; }
+.appearance-dock button[aria-pressed="true"] { color:var(--ink); border-color:var(--line); }
+.appearance-dock button:hover { color:var(--ink); text-decoration:underline; }
+.appearance-dock button:focus-visible { outline:3px solid var(--moss-accent,var(--teal)); outline-offset:2px; }
+.appearance-dock button:active { transform:scale(.97); }
+@media(max-width:700px) { .appearance-dock {right:12px;bottom:12px;} }
+
+.appearance-dock button { transition:transform 120ms var(--ease-out); }
+.appearance-dock button:focus-visible { transition:none; }
+@media(prefers-reduced-motion:reduce) { .appearance-dock button {transition:none;} .appearance-dock button:active {transform:none;} }

@@ -1,605 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html data-palette="mashup" data-mode="light" data-toolkit="ledger" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="./styles/styles.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/Image7.png" />
-
-  <!-- JavaScript -->
-  <script src="./scripts/scripts.js" defer></script>
-
-  <!-- Move About Me closer to Hero -->
-  <style>
-    #about {
-      margin-top: -70px;
-    }
-  </style>
-
-  <title>Portfolio</title>
-</head>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#EFE6DA">
+  <meta name="description" content="Tiya Bordia: Rutgers Computer Science and Data Science student. Explore my work in product design, development, and data analysis.">
+  <title>Tiya Bordia: Selected work</title>
+  <link rel="icon" href="./assets/Image7.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./styles/library.css?v=emil1">
+  <script src="./scripts/section-index.js" defer></script>
+  <link rel="stylesheet" href="./styles/project-dialog.css?v=emil1">
+  <script src="./scripts/project-dialog.js?v=clarify1" defer></script>
+  <link rel="stylesheet" href="./styles/toolkit-ledger.css?v=clean-1">
+  <link rel="stylesheet" href="./styles/theme-variations.css?v=clean-1">
+  <script src="./scripts/appearance.js?v=theme2" defer></script>
+  <link rel="stylesheet" href="./styles/appearance.css?v=emil1">
+<link rel="stylesheet" href="./styles/editorial-cleanup.css?v=layout2"><link rel="stylesheet" href="./styles/responsive.css?v=adapt1"></head>
 <body>
-
-  <!-- Navbar -->
-  <div>
-    <div class="navbar-placeholder"></div>
-
-    <nav class="navbar flex">
-      <a href="#home">
-        <img
-          src="./assets/Image7.png"
-          alt="logo"
-          class="animation"
-        />
-      </a>
-
-      <div class="nav-menu flex">
-        <a href="#home" class="animation">Home</a>
-        <a href="#about" class="animation">About</a>
-        <a href="#experience" class="animation">Experience</a>
-        <a href="#projects" class="animation">Projects</a>
-        <a href="#contact" class="animation">Contact</a>
-      </div>
-
-      <form
-        action="https://www.linkedin.com/in/tiya-bordia-158036288"
-        target="_blank"
-      >
-        <button type="submit" class="btn nav-btn animation">
-          LinkedIn
-        </button>
-      </form>
+  
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header home-header wrap"><div class="appearance-dock"><button class="light-switch" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Pull to turn the light on or off"><svg class="cord-lamp" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="lamp-stem" d="M32 0v12"/><path class="lamp-shade" d="M20 12h24l12 26H8Z"/><path class="lamp-bulb" d="M25 39a7 7 0 0 0 14 0Z"/><path class="lamp-rays" d="M16 47l-4 5m20-3v7m16-9 4 5"/></svg><span class="pull-cord" aria-hidden="true"></span><span class="pull-handle" aria-hidden="true"></span><span class="visually-hidden">Dark mode</span></button></div>
+    <a class="wordmark" href="#home"><img class="brand-logo" src="./assets/Image7.png" alt="" width="48" height="62"><span>Tiya Bordia</span></a>
+    <nav class="header-links" aria-label="Quick links">
+      <a href="./assets/Tiya%20Bordia_resume.pdf" target="_blank" rel="noopener noreferrer">Resume <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+      <a href="mailto:tiyabordia06@gmail.com">Let’s talk <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
     </nav>
-  </div>
-
-
-  <!-- Hero -->
-  <div class="hero flex" id="home">
-
-    <img
-      src="./assets/Tiya.jpg"
-      alt="Tiya Bordia"
-      class="hero-img animation"
-    />
-
-    <h1>
-      <span class="text-effect">I'm Tiya Bordia,</span>
-      A CS student at Rutgers
-    </h1>
-
-    <a
-      href="./assets/Tiya.pdf"
-      class="hero-resume animation"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Resume
-    </a>
-
-  </div>
-
-
-  <!-- About -->
-  <section class="container flex" id="about">
-
-    <div class="container-title">
-      <h2>About Me</h2>
-      <img
-        src="./assets/decoration-heading.png"
-        alt="decoration"
-      />
-    </div>
-
-    <div class="about-sections flex">
-
-      <div class="about-left flex"></div>
-
-      <div class="about-right flex">
-
-        <p>
-          Hi! I’m Tiya Bordia, a junior at Rutgers University double
-          majoring in Computer Science and Data Science with a minor in
-          Business Administration. I’m passionate about using technology
-          to solve real-world problems and enjoy exploring the intersection
-          of software development, data, and automation.
-
-          <br><br>
-
-          Through my internships, projects, and coursework, I’ve gained
-          hands-on experience with Python, Java, SQL, data analytics, AI,
-          automation, and UI/UX development. I especially enjoy
-          troubleshooting technical problems, working with data, and
-          finding ways to make processes more efficient.
-
-          <br><br>
-
-          I hope to build a career where I can combine technology, data,
-          and creative problem-solving to develop solutions that make a
-          meaningful impact.
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Experience -->
-  <section class="container flex" id="experience">
-
-    <div class="container-title">
-      <h2>Experience</h2>
-      <img
-        src="./assets/decoration-heading.png"
-        alt="decoration"
-      />
-    </div>
-
-
-    <div class="grid-container">
-
-
-      <!-- Experience 1 -->
-      <div class="services-format flex animation">
-
-        <h3>01</h3>
-
-        <h2 class="text-effect">
-          Corrective Solution Intern
-        </h2>
-
-        <p>
-          Worked with SQL, XML, and automation tools to identify and resolve
-          data and software issues. Built automated workflows to reduce manual
-          tasks and improve team efficiency.
-        </p>
-
-      </div>
-
-
-      <!-- Experience 2 -->
-      <div class="services-format flex animation">
-
-        <h3>02</h3>
-
-        <h2 class="text-effect">
-          Design Research Intern
-        </h2>
-
-        <p>
-          Developed an interactive ArcGIS web map to visualize tagged fish
-          movement patterns using geospatial and temporal data collected
-          from acoustic receivers.
-        </p>
-
-      </div>
-
-
-      <!-- Experience 3 -->
-      <div class="services-format flex animation">
-
-        <h3>03</h3>
-
-        <h2 class="text-effect">
-          Innovation Fellow Leader
-        </h2>
-
-        <p>
-          Led and mentored a cohort of 20 students through innovation and
-          entrepreneurship projects. Designed a student-focused curriculum
-          blending design thinking, analytics, and creativity to strengthen
-          problem-solving and market readiness.
-        </p>
-
-      </div>
-
-
-      <!-- Experience 4 -->
-      <div class="services-format flex animation">
-
-        <h3>04</h3>
-
-        <h2 class="text-effect">
-          AI/ML Fellow
-        </h2>
-
-        <h4>
-          Meta & Break Through Tech @ Cornell Tech
-        </h4>
-
-        <p>
-          Completed hands-on machine learning training with a focus on
-          Python, data modeling, supervised and unsupervised learning,
-          and neural networks.
-
-          Currently applying these skills through an AI/ML Fellowship
-          with Meta, working on projects that integrate real-world data
-          and ethical AI design.
-        </p>
-
-      </div>
-
-
-      <!-- Experience 5 -->
-      <div class="services-format flex animation">
-
-        <h3>05</h3>
-
-        <h2 class="text-effect">
-          Blueprint Frontend Fellowship
-        </h2>
-
-        <p>
-          Learned front-end development using React, TypeScript,
-          JavaScript, HTML, and CSS. Built responsive, interactive web
-          interfaces while mastering React components, state management,
-          and hooks.
-
-          Developed a React-based web app to track stock market information.
-        </p>
-
-      </div>
-
-
-      <!-- Experience 6 -->
-      <div class="services-format flex animation">
-
-        <h3>06</h3>
-
-        <h2 class="text-effect">
-          Blueprint Product Management Fellowship
-        </h2>
-
-        <p>
-          Designed and developed a connection-building app enabling
-          meaningful interactions through shared interests.
-
-          Conducted user research and used data insights to refine features.
-
-          Designed and implemented MVP features while monitoring key
-          performance metrics.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- Skills -->
-    <div class="about-skills">
-
-      <div>
-
-        <h3>Languages</h3>
-
-<div class="about-skill flex animation">
-  <p>Python</p>
-  <hr style="width: 85%" />
-</div>
-
-<div class="about-skill flex animation">
-  <p>Java</p>
-  <hr style="width: 75%" />
-</div>
-
-<div class="about-skill flex animation">
-  <p>SQL</p>
-  <hr style="width: 70%" />
-</div>
-
-<div class="about-skill flex animation">
-  <p>JavaScript</p>
-  <hr style="width: 65%" />
-</div>
-
-<div class="about-skill flex animation">
-  <p>C</p>
-  <hr style="width: 55%" />
-</div>
-
-<div class="about-skill flex animation">
-  <p>HTML & CSS</p>
-  <hr style="width: 70%" />
-</div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Projects -->
-  <section class="container flex" id="projects">
-
-    <div class="container-title">
-
-      <h2>Projects</h2>
-
-      <img
-        src="./assets/decoration-heading.png"
-        alt="decoration"
-      />
-
-    </div>
-
-
-    <div class="grid-container">
-
-
-      <!-- Project 1 -->
-      <div class="services-format flex animation">
-
-        <h3>01</h3>
-
-        <h2 class="text-effect">
-
-          <a
-            href="https://github.com/TiyaB-debug/CIC_CovidResearch"
-            target="_blank"
-          >
-            COVID Research Project
-          </a>
-
-        </h2>
-
-        <p>
-          Analyzed the effectiveness of lockdown policies across different
-          states in Brazil, India, and the United States during the
-          COVID-19 pandemic.
-        </p>
-
-      </div>
-
-
-      <!-- Project 2 -->
-      <div class="services-format flex animation">
-
-        <h3>02</h3>
-
-        <h2 class="text-effect">
-
-          <a
-            href="https://pomodoro-timer-seven-delta.vercel.app/"
-            target="_blank"
-          >
-            Pomodoro Timer
-          </a>
-
-        </h2>
-
-        <p>
-          Built with React, HTML, CSS, and JavaScript, this app offers a
-          sleek, intuitive interface with customizable timer settings,
-          aesthetic backgrounds, Spotify integration, and task management
-          tools to help users stay productive.
-        </p>
-
-      </div>
-
-
-      <!-- Project 3 -->
-      <div class="services-format flex animation">
-
-        <h3>03</h3>
-
-        <h2 class="text-effect">
-
-          <a
-            href="https://nutriplanapp.vercel.app/"
-            target="_blank"
-          >
-            NutriPlan
-          </a>
-
-        </h2>
-
-        <p>
-          A healthy meal planner web app helping users find recipes tailored
-          to their needs based on ingredients, diet preferences, and
-          allergens. Built with React, HTML, CSS, and JavaScript.
-        </p>
-
-      </div>
-
-
-      <!-- Project 4 -->
-      <div class="services-format flex animation">
-
-        <h3>04</h3>
-
-        <h2 class="text-effect">
-          SkinSense
-        </h2>
-
-        <p>
-          Developed an AI-powered tool using image recognition to detect
-          skin conditions, primarily MonkeyPox.
-
-          Employs dual models for accurate analysis, helping users seek
-          medical advice faster.
-
-          Awarded $250 in a competition with 250+ participants.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- Contact -->
-  <section class="container flex" id="contact">
-
-    <div class="container-title">
-
-      <h2>Contact</h2>
-
-      <img
-        src="./assets/decoration-heading.png"
-        alt="decoration"
-      />
-
-    </div>
-
-
-    <div class="contact-section flex">
-
-
-      <!-- Contact Info -->
-      <div class="contact-left flex">
-
-        <h2 class="text-effect">
-          Let's Talk
-        </h2>
-
-        <p>
-          Contact me about employment or projects
-        </p>
-
-
-        <div class="contact-details flex">
-
-          <div class="contact-detail flex">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <p>
-              tiyabordia06@gmail.com
-            </p>
-
-          </div>
-
-
-          <div class="contact-detail flex">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <p>
-              USA
-            </p>
-
-          </div>
-
+  </header>
+  <main id="main">
+    <section class="hero wrap hero-redesign" id="home" aria-labelledby="name-title">
+      <h1 id="name-title" class="animated-name" aria-label="Tiya Bordia"><span aria-hidden="true"><span class="name-letter" style="--letter-delay:0ms">T</span><span class="name-letter" style="--letter-delay:75ms">i</span><span class="name-letter" style="--letter-delay:150ms">y</span><span class="name-letter" style="--letter-delay:225ms">a</span><span class="name-letter" style="--letter-delay:300ms">&#160;</span><span class="name-letter surname-letter" style="--letter-delay:375ms">B</span><span class="name-letter surname-letter" style="--letter-delay:450ms">o</span><span class="name-letter surname-letter" style="--letter-delay:525ms">r</span><span class="name-letter surname-letter" style="--letter-delay:600ms">d</span><span class="name-letter surname-letter" style="--letter-delay:675ms">i</span><span class="name-letter surname-letter" style="--letter-delay:750ms">a</span></span></h1>
+      <div class="hero-bottom">
+        <p class="hero-tagline">From research<br>to working software</p>
+        <div class="hero-copy"><p class="hero-intro">I build interfaces and work with data, from career exploration tools to research maps.</p>
+          <a class="text-action" href="#collection">Explore my work <span aria-hidden="true">↓</span></a>
         </div>
-
       </div>
-
-
-      <!-- Contact Form -->
-      <form
-        action="https://formsubmit.co/tiyabordia06@gmail.com"
-        method="POST"
-        class="contact-right flex"
-      >
-
-        <label for="name">
-          Your Name
-        </label>
-
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your name"
-        />
-
-
-        <label for="email">
-          Your Email
-        </label>
-
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-        />
-
-
-        <label for="message">
-          Enter a message
-        </label>
-
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Leave a message"
-        ></textarea>
-
-
-        <button
-          type="submit"
-          class="btn animation"
-        >
-          Submit
-        </button>
-
-      </form>
-
+    </section>
+    <div class="section-index-shell">
+      <nav class="section-index wrap" aria-label="Portfolio sections">
+        <a href="#about" class="section-tab is-active" aria-current="location">About me</a>
+        <a href="#archive" class="section-tab">Experience</a>
+        <a href="#collection" class="section-tab">Projects</a>
+        <a href="#awards" class="section-tab">Awards</a>
+        <a href="#skills" class="section-tab">Skills</a>
+      </nav>
     </div>
-
-  </section>
-
-
-  <!-- Footer -->
-  <footer class="flex">
-
-    <div class="footer-top flex">
-
-      <div class="footer-top-left">
-
-        <img
-          src="./assets/Image7.png"
-          alt="logo"
-        />
-
-      </div>
-
-
-      <div class="footer-top-right">
-
-        <p>
-          Just a student wanting to learn more! :)
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <hr />
-
-
-    <div class="footer-bottom">
-
-      <p>
-        ©2024 by Tiya Bordia.
-      </p>
-
-    </div>
-
-  </footer>
-
-
+    <section class="about section" id="about" aria-labelledby="about-title"><div class="wrap about-layout"><figure class="about-photo"><div class="portrait-frame"><img src="./assets/tiya-portrait.jpg" alt="Tiya Bordia outdoors at Rutgers" width="1536" height="2048" loading="lazy"></div><figcaption>Tiya Bordia</figcaption></figure><div><h2 id="about-title">About me</h2><p class="about-lead">I’m interested in how people move through software, and how data can help improve it.</p><p>At SageSure, I investigated software and data issues. At Jacques Cousteau NERR, I built research maps. I also mentor student innovators through Rutgers IDEA.</p><div class="about-education" id="education" aria-labelledby="education-title"><h3 id="education-title">At Rutgers</h3><p class="education-university">Rutgers University, New Brunswick</p><p>Computer Science and Data Science<br>Minor in Business Administration, Junior</p></div></div></div></section>
+    <section class="section experience wrap" id="archive" aria-labelledby="experience-title">
+      <div class="section-heading"><h2 id="experience-title">Experience</h2><a class="text-action" href="./assets/Tiya%20Bordia_resume.pdf" target="_blank" rel="noopener noreferrer">Full resume ↗</a></div>
+      <div class="experience-list"><article class="experience-row"><p class="experience-date">June to August 2026</p><div><h3>Corrective Solutions Intern</h3><p class="experience-company">SageSure · Jersey City, NJ</p><p class="experience-highlight">At SageSure, investigating insurance data issues also revealed opportunities to improve support workflows. One Jira automation I built removed around 200 manual ticket closures each month.</p><details class="role-details"><summary aria-label="Read more about my work at SageSure">Inside the work</summary><div class="experience-stories"><section><h4>Making ticket reviews more useful</h4><p>An AI-assisted evaluation tool became a way to look beyond individual tickets. My work on its design and evaluation covered 700 tickets, identifying 100 cases linked to agent misunderstandings and producing a reusable evaluation framework.</p></section><section><h4>Removing repetitive work</h4><p>Resolved tickets still needed manual closure. A Jira workflow I built automated around 200 of those closures each month.</p></section><section><h4>Following an issue through to a fix</h4><p>Investigations combined SQL queries, XML analysis, and validation tools. From there, the work continued through Jira documentation and collaboration with the team to test and verify fixes.</p></section></div></details></div></article><article class="experience-row"><p class="experience-date">May to August 2025</p><div><h3>Design Research Intern</h3><p class="experience-company">Jacques Cousteau National Estuarine Research Reserve · Tuckerton, NJ</p><p class="experience-highlight">Tagged fish leave a trail of receiver data. My work at Jacques Cousteau NERR turned those records into an interactive ArcGIS map, letting researchers explore movement across locations and time.</p><details class="role-details"><summary aria-label="Read more about my work at Jacques Cousteau NERR">Inside the work</summary><div class="experience-stories"><section><h4>Making movement visible</h4><p>The ArcGIS map brought together time-enabled layers, species styling, and dynamic labels. These choices made it possible to follow movement over time and explore differences between species.</p></section><section><h4>Keeping the map grounded in the research</h4><p>Collaboration shaped both the data checks and its presentation. Accuracy mattered as much as the interface: the map needed to support conversations about species behavior and estuarine habitats.</p></section></div></details></div></article><article class="experience-row"><p class="experience-date">September 2025 to present</p><div><h3>University Innovation Fellow Leader</h3><p class="experience-company">Rutgers IDEA · New Brunswick, NJ</p><p class="experience-highlight">At Rutgers IDEA, my role is to help 20 students move from an early idea to a researched project. That means guiding problem discovery, project development, and market strategy.</p><details class="role-details"><summary aria-label="Read more about my work at Rutgers IDEA">Inside the work</summary><div class="experience-stories"><section><h4>Building a place to practice</h4><p>The curriculum I designed connects analytics and design thinking with hands-on project work. Students have opportunities to develop their ideas and put what they learn into practice.</p></section><section><h4>Helping more students find the program</h4><p>Events, ambassador outreach, email campaigns, and digital content helped more students find the program. My work across those efforts contributed to a 40% increase in visibility and student engagement.</p></section><section><h4>Where I started</h4><p>This work began with an IDEA Fellowship from September 2024 to May 2025. Projects explored AI and GIS approaches to climate resilience, alongside sustainability product strategies and research presentations to stakeholders.</p></section></div></details></div></article><article class="experience-row"><p class="experience-date">May 2025 to present</p><div><h3>AI Fellow</h3><p class="experience-company">Break Through Tech · Cornell Tech / Meta</p><p class="experience-highlight">Through Break Through Tech, I collaborate with Meta engineers on detecting social bias in datasets. The project uses language models and word embeddings to examine patterns in language data.</p><details class="role-details"><summary aria-label="Read more about my work at Break Through Tech">Inside the work</summary><div class="experience-stories"><section><h4>Looking for bias in language</h4><p>Our project, Finding Dataset Bias using Language Models, uses word embeddings and NLP to detect and analyze social bias in datasets.</p></section><section><h4>Learning through a research team</h4><p>Selection from more than 1,500 applicants opened the door to a 12-month AI fellowship, with technical learning grounded in collaborative project work.</p></section></div></details></div></article><details class="earlier-experience"><summary>Earlier experience at Blueprint</summary><h3>Frontend Fellowship</h3><p>October to December 2024 · New Brunswick, NJ</p><p>A stock-tracking application became my introduction to frontend development. Live API data provided practice with React components, state management, and interfaces that respond to changing information.</p><h3>Product Management</h3><p>October to December 2024</p><p>A team project focused on shaping a connection-building app in Figma. Market research and competitor analysis informed the first version; feedback surveys guided the next design revisions.</p></details></div></section>
+    <section class="projects section wrap" id="collection" aria-labelledby="projects-title">
+      <div class="section-heading"><h2 id="projects-title">Selected projects</h2><p>Five projects. Open a book to see the work; scroll to browse them all.</p></div>
+      <ol class="project-shelf" aria-label="Projects, scroll to browse" tabindex="0">
+        <li class="book-item">
+          <a class="book book-burgundy" href="./projects/lantern.html" aria-labelledby="lantern-title lantern-action" aria-describedby="lantern-contribution">
+            <span class="book-binding" aria-hidden="true"></span>
+            
+            <h3 class="book-title" id="lantern-title">Lantern</h3>
+            <p class="book-contribution" id="lantern-contribution">I built the frontend, sign-in, and assessment flow for a career exploration app.</p>
+            <span class="book-art"><svg class="cover-star" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 7v86M7 50h86M20 20l60 60M20 80l60-60"/></svg></span>
+            <span class="book-tools">Next.js, TypeScript, Supabase</span>
+            <span class="book-action" id="lantern-action">Open project <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+          </a>
+        </li><li class="book-item">
+          <a class="book book-clay" href="./projects/micromate.html" aria-labelledby="micromate-title micromate-action" aria-describedby="micromate-contribution">
+            <span class="book-binding" aria-hidden="true"></span>
+            
+            <h3 class="book-title" id="micromate-title">MicroMate</h3>
+            <p class="book-contribution" id="micromate-contribution">I built a React prototype and connected USDA nutrition data through Python scripts.</p>
+            <span class="book-art"><svg class="cover-plant" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M44 94 60 8M54 37C25 40 17 23 18 15c25-1 38 9 36 22ZM50 61C74 65 89 51 90 42c-25-7-38 4-40 19ZM47 79C24 81 14 68 13 59c23-4 34 5 34 20Z"/></svg></span>
+            <span class="book-tools">React, Python, Figma</span>
+            <span class="book-action" id="micromate-action">Open project <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+          </a>
+        </li><li class="book-item">
+          <a class="book book-teal" href="./projects/covid-research.html" aria-labelledby="covid-research-title covid-research-action" aria-describedby="covid-research-contribution">
+            <span class="book-binding" aria-hidden="true"></span>
+            
+            <h3 class="book-title" id="covid-research-title">Pandemic response analysis</h3>
+            <p class="book-contribution" id="covid-research-contribution">I analyzed pandemic policies with Python and Tableau, using regression to examine their effectiveness.</p>
+            <span class="book-art"></span>
+            <span class="book-tools">Python, Tableau, regression</span>
+            <span class="book-action" id="covid-research-action">Open project <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+          </a>
+        </li><li class="book-item">
+          <a class="book book-navy" href="./projects/citywatch.html" aria-labelledby="citywatch-title citywatch-action" aria-describedby="citywatch-contribution">
+            <span class="book-binding" aria-hidden="true"></span>
+            
+            <h3 class="book-title" id="citywatch-title">CityWatch</h3>
+            <p class="book-contribution" id="citywatch-contribution">I built a tool that assigns inspection areas to teams based on risk and available capacity.</p>
+            <span class="book-art"><svg class="cover-plant" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M44 94 60 8M54 37C25 40 17 23 18 15c25-1 38 9 36 22ZM50 61C74 65 89 51 90 42c-25-7-38 4-40 19ZM47 79C24 81 14 68 13 59c23-4 34 5 34 20Z"/></svg></span>
+            <span class="book-tools">Python, geospatial data</span>
+            <span class="book-action" id="citywatch-action">Open project <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span>
+          </a>
+        </li><li class="book-item"><a class="book book-moss" href="./projects/focus.html" aria-labelledby="focus-title focus-action" aria-describedby="focus-contribution"><span class="book-binding" aria-hidden="true"></span><h3 class="book-title" id="focus-title">Pomodoro Timer</h3><p class="book-contribution" id="focus-contribution">I built a productivity app with Spotify integration, task management, and customizable settings.</p><span class="book-art"><svg class="cover-clock" viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="50" cy="50" r="41"/><path d="M50 22v28l23 14"/></svg></span><span class="book-tools">React, JavaScript, Spotify API</span><span class="book-action" id="focus-action">Open project ↗</span></a></li></ol>
+      <div class="shelf-edge" aria-hidden="true"></div>
+    </section>
+    <section class="section awards wrap" id="awards" aria-labelledby="awards-title"><div class="section-heading"><h2 id="awards-title">Awards</h2></div><div class="award-list"><article><h3>Undergraduate Student Innovation Award</h3><p>Rutgers Innovation Awards, 2026</p></article><article><h3>SkinSense project prize</h3><p>$250 prize in a competition with 250+ participants.</p></article></div></section>
+    <section class="section skills wrap" id="skills" aria-labelledby="skills-title"><div class="section-heading"><h2 id="skills-title">Tools I use</h2><p>Development, data analysis, and design.</p></div><div class="skill-columns"><article class="toolkit-card"><h3>Development</h3><p class="toolkit-card-note">Interfaces and applications</p><ul><li>Python</li><li>Java</li><li>JavaScript &amp; TypeScript</li><li>React &amp; Next.js</li><li>HTML &amp; CSS</li></ul></article><article class="toolkit-card"><h3>Data</h3><p class="toolkit-card-note">Analysis and visualization</p><ul><li>SQL</li><li>pandas &amp; NumPy</li><li>Tableau</li><li>ArcGIS</li><li>Excel</li></ul></article><article class="toolkit-card"><h3>Design and collaboration</h3><p class="toolkit-card-note">Prototypes and project work</p><ul><li>Figma</li><li>Git &amp; GitHub</li><li>Jira</li><li>Canva</li></ul></article></div><div class="additional-skills"><h3>Professional development</h3><p>Oracle Vector Search · Intro to Generative AI via Udacity · AI Programming with Python · Spanish Seal of Biliteracy</p><h3>Languages</h3><p>English, Hindi, Spanish</p></div></section>
+    <section class="contact section" id="contact" aria-labelledby="contact-title"><div class="wrap"><h2 id="contact-title">Let’s talk</h2><div class="contact-bottom"><p>For internships, projects, or a conversation about my work.</p><a href="mailto:tiyabordia06@gmail.com">tiyabordia06@gmail.com ↗</a></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><a href="#home">Tiya Bordia ↑</a><p>© 2026 Tiya Bordia</p><nav aria-label="Social links"><a href="https://www.linkedin.com/in/tiya-bordia-158036288" target="_blank" rel="noopener noreferrer"><svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 0H3.55A3.55 3.55 0 0 0 0 3.55v16.9A3.55 3.55 0 0 0 3.55 24h16.9A3.55 3.55 0 0 0 24 20.45V3.55A3.55 3.55 0 0 0 20.45 0ZM7.12 20.45H3.56V9h3.56ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm15.11 13.02h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45Z"/></svg><span>LinkedIn ↗</span></a><a href="https://github.com/TiyaB-debug" target="_blank" rel="noopener noreferrer"><svg class="social-logo" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.6-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg><span>GitHub ↗</span></a></nav></footer>
 </body>
-
 </html>

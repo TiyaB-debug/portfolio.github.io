@@ -1,0 +1,110 @@
+/* Review-only palettes: the current homepage remains unchanged. */
+:root {
+ --paper:#EFE6DA; --ink:#25344F; --muted:#525B66; --line:#B7AA9A;
+ --burgundy:#632024; --navy:#25344F; --teal:#6F4D38; --slate:#617891; --clay:#D5B895;
+ --paper-deep:var(--paper); --cover-burgundy:#632024; --cover-clay:#D5B895; --cover-teal:#617891; --cover-navy:#25344F;
+ --book-text:#F4EDE4; --cover-ink:#35271F; --light-green:#DCE1B8; --green-ink:#173125;
+ --button-selected:#25344F; --button-selected-ink:#F4EDE4; --cover-wash:#EFE6DA;
+}
+:root[data-palette="earth"] {
+ --paper:#EFE6DA; --ink:#173125; --muted:#555D4B; --line:#B2AB96;
+ --burgundy:#424C21; --navy:#212E40; --teal:#173125; --slate:#7D8769; --clay:#B27D57;
+ --cover-burgundy:#173125; --cover-clay:#AE9372; --cover-teal:#424C21; --cover-navy:#212E40;
+ --button-selected:#173125;
+}
+:root[data-palette="sage"] {
+ --paper:#EFE6DA; --ink:#0A3323; --muted:#5A554E; --line:#BEB2A3;
+ --burgundy:#4D0E13; --navy:#25344F; --teal:#105666; --slate:#7D8769; --clay:#B57C70;
+ --cover-burgundy:#4D0E13; --cover-clay:#B57C70; --cover-teal:#105666; --cover-navy:#DCE1B8;
+ --button-selected:#DCE1B8; --button-selected-ink:#173125;
+}
+:root[data-mode="dark"] {
+ color-scheme:dark; --paper:#192333; --ink:#F0E6D8; --muted:#C4C8CE; --line:#56616D;
+ --burgundy:#E5B2A9; --navy:#ABC0D3; --teal:#B8CDD9; --slate:#8CA3BA;
+ --cover-wash:#192333;
+}
+:root[data-palette="earth"][data-mode="dark"] {
+ --paper:#14271E; --ink:#ECE5D8; --muted:#C5C9B8; --line:#566554;
+ --burgundy:#DCE1B8; --navy:#B9C7D2; --teal:#DCE1B8; --cover-wash:#14271E;
+}
+:root[data-palette="sage"][data-mode="dark"] {
+ --paper:#18251F; --ink:#EFE6DA; --muted:#C9CFC4; --line:#5F6D5F;
+ --burgundy:#E8B5AE; --navy:#B5C7DC; --teal:#DCE1B8; --cover-wash:#18251F;
+}
+html[data-mode="light"] { color-scheme:light; }
+.theme-review { background:var(--paper); color:var(--ink); border-bottom:1px solid var(--line); padding:24px 0; }
+.review-inner { display:grid; gap:16px; }
+.review-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; }
+.review-heading strong { font-weight:600; font-size:18px; }
+.review-heading a { font-size:14px; text-decoration:underline; }
+.review-controls { display:flex; gap:32px; flex-wrap:wrap; }
+.review-controls fieldset { border:0; padding:0; margin:0; min-width:0; }
+.review-controls legend { font:400 14px/1.5 var(--sans); color:var(--muted); margin-bottom:8px; }
+.review-options { display:flex; gap:8px; flex-wrap:wrap; }
+.review-options button { min-height:44px; padding:10px 16px; border:1px solid var(--line); background:var(--paper); color:var(--ink); font:500 14px/1.4 var(--sans); cursor:pointer; border-radius:0; }
+.review-options button:hover { border-color:var(--ink); }
+.review-options button[aria-pressed="true"] { background:var(--button-selected); color:var(--button-selected-ink); border-color:var(--button-selected); }
+.review-options button:focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+.review-options button:active { transform:translateY(1px); }
+#palette-note { font-size:14px; line-height:1.6; color:var(--muted); }
+.palette-swatches { display:flex; gap:12px; flex-wrap:wrap; }
+.palette-swatch { display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--muted); }
+.palette-swatch i { width:18px; height:18px; background:var(--swatch); border:1px solid var(--line); }
+.book { color:var(--book-text); }
+.book-burgundy { --cover:var(--cover-burgundy); }
+.book-clay { --cover:var(--cover-clay); color:var(--cover-ink); }
+.book-teal { --cover:var(--cover-teal); }
+.book-navy { --cover:var(--cover-navy); }
+.book::before { background:var(--cover-wash); }
+[data-palette="sage"] .book-navy { color:var(--green-ink); }
+[data-palette="sage"] .book-navy .book-action { border-color:var(--rule-on-clay); }
+[data-palette="sage"] .skill-columns h3 { background:var(--light-green); color:var(--green-ink); display:inline-block; padding:2px 10px; }
+[data-mode="dark"] .book-teal { --cover:#40556B; }
+[data-palette="earth"][data-mode="dark"] .book-teal { --cover:#424C21; }
+[data-palette="sage"][data-mode="dark"] .book-teal { --cover:#105666; }
+[data-mode="dark"] .book-clay::before { opacity:.16; }
+[data-mode="dark"] .book-clay:hover::before, [data-mode="dark"] .book-clay:focus-visible::before { opacity:0; }
+@media(max-width:700px) { .theme-review { padding-block:20px; } .review-controls { gap:16px; } .review-heading { align-items:start; } }
+
+/* Instant review navigation keeps side-by-side palette comparisons aligned. */
+html { scroll-behavior: auto; }
+
+/* Keep text readable on lighter swatches and the faded clay cover. */
+:root { --slate-cover-ink:#101820; --clay-wash:#EFE6DA; }
+[data-palette="slate"][data-mode="light"] .book-teal { color:var(--slate-cover-ink); }
+[data-palette="slate"][data-mode="light"] .book-teal:hover, [data-palette="slate"][data-mode="light"] .book-teal:focus-visible { --cover:#8B9BAA; }
+[data-mode="dark"] .book-clay::before { background:var(--clay-wash); opacity:.24; }
+[data-mode="dark"] .book-clay:hover::before, [data-mode="dark"] .book-clay:focus-visible::before { opacity:0; }
+[data-palette="earth"][data-mode="light"] .book-teal::before { opacity:.16; }
+
+/* Revised mashup: redder burgundy, reference-inspired pink and rosy brown. */
+:root[data-palette="mashup"] {
+ --pink:#983254; --rosy-brown:#D3968C;
+ --paper:#EFE6DA; --ink:#25344F; --muted:#5A554E; --line:#BEB2A3;
+ --burgundy:#4D0E13; --navy:#25344F; --teal:#6F4D38; --slate:#617891;
+ --cover-burgundy:var(--pink); --cover-clay:var(--rosy-brown); --cover-teal:#617891; --cover-navy:#25344F;
+ --cover-ink:#291719; --cover-wash:#EFE6DA;
+ --button-selected:#4D0E13; --button-selected-ink:#EFE6DA;
+}
+:root[data-palette="mashup"][data-mode="dark"] {
+ --paper:#3A121B; --ink:#F2E7DB; --muted:#DEC3C5; --line:#93616C;
+ --burgundy:var(--rosy-brown); --navy:#AFC2D7; --teal:#D5B895; --slate:#91A7BE;
+ --cover-wash:#3A121B; --button-selected:var(--rosy-brown); --button-selected-ink:#291719;
+}
+[data-palette="mashup"] .book-navy { color:var(--book-text); }
+[data-palette="mashup"][data-mode="light"] .book-burgundy:not(:hover):not(:focus-visible)::before { opacity:.12; }
+[data-palette="mashup"] .book-teal { --cover:#617891; }
+[data-palette="mashup"][data-mode="light"] .book-teal { color:var(--slate-cover-ink); }
+[data-palette="mashup"][data-mode="light"] .book-teal:hover,
+[data-palette="mashup"][data-mode="light"] .book-teal:focus-visible { --cover:#8B9BAA; }
+[data-palette="mashup"][data-mode="dark"] .book-teal { --cover:#40556B; }
+[data-palette="mashup"] .skill-columns h3 { display:inline-block; background:var(--rosy-brown); color:var(--cover-ink); padding:2px 10px; }
+
+/* A small, intentional green thread alongside pink and rose. */
+:root[data-palette="mashup"] { --moss-accent:#526347; --moss-soft:#AEB89B; }
+:root[data-palette="mashup"][data-mode="dark"] { --moss-accent:#AEB89B; }
+[data-palette="mashup"] .brand-symbol { stroke:var(--moss-accent); }
+[data-palette="mashup"] .section-tab.is-active { color:var(--moss-accent); border-bottom-color:var(--moss-accent); }
+[data-palette="mashup"] .shelf-edge { border-top-color:var(--moss-accent); }
+[data-palette="mashup"] .skill-columns h3 { background:transparent; color:var(--moss-accent); padding:0; }
+[data-palette="mashup"] .book:focus-visible { outline-color:var(--moss-accent); }

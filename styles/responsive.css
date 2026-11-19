@@ -1,0 +1,43 @@
+/* Adapt the same content to touch, narrow viewports, and short windows. */
+body { padding-bottom:env(safe-area-inset-bottom, 0px); }
+.wrap { max-width:calc(100% - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)); }
+.header-links, .home-header .wordmark { min-width:0; }
+.home-header .header-links a { min-height:44px; }
+.case-facts > div, .hero-copy, .about-layout > div { min-width:0; }
+.case-facts dd { overflow-wrap:anywhere; }
+/* A wrapped dialog title owns its height; content uses the remaining space. */
+.book-dialog[open] { display:grid; grid-template-rows:auto minmax(0,1fr); }
+.book-dialog-bar { min-width:0; align-items:start; }
+.book-dialog-bar h2 { min-width:0; overflow-wrap:anywhere; align-self:center; }
+.book-dialog-close { flex:none; }
+.book-dialog-scroll { height:auto; min-height:0; padding-bottom:max(40px, env(safe-area-inset-bottom, 0px)); }
+.book-dialog .case-study > h1 { overflow-wrap:break-word; }
+@media(max-width:900px) {
+ .library-reading .case-body { grid-template-columns:minmax(0,1fr); }
+ .library-reading .case-body aside { position:static; display:flex; flex-wrap:wrap; gap:8px 24px; }
+ .library-reading .case-body aside a { min-height:44px; }
+}
+@media(max-width:700px) {
+ .home-header { column-gap:16px; row-gap:4px; }
+ .home-header .wordmark { min-height:44px; }
+ .home-header .header-links { flex-wrap:wrap; column-gap:16px; row-gap:0; }
+ .section-index { grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:12px; }
+ .section-tab { min-width:0; text-align:center; white-space:normal; }
+ .book-item { flex-basis:min(300px,calc(100vw - 64px)); }
+ .book { min-height:390px; }
+ .next-project { flex-wrap:wrap; align-items:start; }
+ .book-dialog { max-height:calc(100dvh - 24px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); }
+ .book-dialog-scroll { padding-inline:16px; }
+ .contact-bottom a { overflow-wrap:anywhere; }
+}
+/* Short landscape/zoomed windows need reading space more than a sticky index. */
+@media(max-height:500px) {
+ .section-index-shell { position:static; }
+ html { scroll-padding-top:16px; }
+ .book-dialog { height:94dvh; max-height:94dvh; }
+ .book-dialog-scroll { padding-top:16px; }
+}
+@media(hover:none), (pointer:coarse) {
+ .role-details summary, .earlier-experience summary { min-height:44px; }
+ .book:active { text-decoration:underline; }
+}
